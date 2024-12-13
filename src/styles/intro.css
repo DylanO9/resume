@@ -1,0 +1,39 @@
+#intro {
+    font-size: 1.5em;
+    text-align: center;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+#headshot {
+    /* keep the ratio of the image */
+    width: 250px; /* Adjust the size as needed */
+    height: 250px; /* Adjust the size as needed */
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: .25rem solid white;
+}
+
+#intro ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+#intro ul li {
+    margin: 1rem;
+}
+
+
+#intro a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
