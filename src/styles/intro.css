@@ -2,6 +2,10 @@
     font-size: 1.5em;
     text-align: center;
     border-bottom: 1px solid var(--secondary-color);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -26,12 +30,13 @@ h2 {
     list-style-type: none;
     padding: 0;
     margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
 }
 
 #intro ul li {
     margin: 1rem;
 }
-
 
 #intro a {
     color: var(--primary-color);

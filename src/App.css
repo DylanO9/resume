@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #007bff;
+  --primary-color: #00bfff;
   --secondary-color: #6c757d;
   --background-dark-color: #10121A;
   --background-dark-grey: #191D2B;
@@ -7,21 +7,18 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background-color: var(--background-dark-color);
   color: white;
   font-family:'Courier New', Courier, monospace;
+  overflow-x: hidden;
 }
 
 section {
   width: 100vw;
   height: 100vh;
-  margin: 0;
-  padding: 10rem;
-}
-
-h1, h2, h3 {
-  margin: 0;
 }
