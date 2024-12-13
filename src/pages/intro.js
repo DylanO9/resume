@@ -1,7 +1,6 @@
 import '../styles/intro.css';
 import headshot from '../assets/headshot.jpg';
 import { FaLinkedin, FaGithub, FaFileAlt } from 'react-icons/fa';
-import resume from '../assets/Resume.pdf';
 
 export default function Intro() {
   return (

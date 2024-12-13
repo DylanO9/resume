@@ -10,6 +10,20 @@
 
 h1 {
     font-size: 4rem;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid var(--secondary-color);
+    animation: typing 2s steps(14, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 14ch; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--secondary-color); }
 }
 
 h2 {
@@ -17,9 +31,8 @@ h2 {
 }
 
 #headshot {
-    /* keep the ratio of the image */
-    width: 250px; /* Adjust the size as needed */
-    height: 250px; /* Adjust the size as needed */
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center;
