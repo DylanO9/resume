@@ -22,3 +22,46 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+.work-experience-item h3 {
+    font-size: 2rem;
+}
+
+.work-experience-item h4 {
+    font-size: 1.5rem;
+}
+
+.work-experience-item p, .work-experience-item ul {
+    font-size: 1.25rem;
+}
+
+#resume a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+#resume a > span {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: white;
+}
+
+#resume a:hover {
+    color: var(--secondary-color);
+}
+
+#resume img {
+    background-color: var(--background-dark-color);
+    width: 50%;
+}
+
+#education-list {
+    display:flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
+}

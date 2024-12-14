@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
       <Intro />
-      <Projects />
       <Resume />
+      <Projects />
     </div>
   );
 }

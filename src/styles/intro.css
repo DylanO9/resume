@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 
-h1 {
+#intro h1 {
     font-size: 4rem;
     overflow: hidden;
     white-space: nowrap;
@@ -24,10 +24,6 @@ h1 {
 @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: var(--secondary-color); }
-}
-
-h2 {
-    font-size: 3rem;
 }
 
 #headshot {
