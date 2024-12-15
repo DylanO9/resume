@@ -39,6 +39,7 @@
     text-decoration: none;
     color: var(--primary-color);
     font-size: 1.5rem;
+    margin: 2rem;
 }
 
 #resume a > span {
