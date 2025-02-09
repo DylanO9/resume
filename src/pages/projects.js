@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import '../styles/projects.css';
 import cryptotracker from '../assets/crypto-tracker.png';
 import flutterSafety from '../assets/flutter-safety.jpg';
@@ -12,7 +13,9 @@ import iphone7 from '../assets/iphone_7.png';
 
 import { FaGithub } from 'react-icons/fa';
 
-export default function Projects () {
+export default function Projects() {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
     const projects = [
         {
             title: "Fitness Network",
@@ -44,16 +47,18 @@ export default function Projects () {
         }
     ];
 
+    const handleImageClick = (images) => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
     return (
         <section id="projects">
             <ul>
                 {projects.map((project, index) => (
                     <li key={index}>
                         {project.images && (
-                            <div className="image-grid">
-                                {project.images.map((image, imgIndex) => (
-                                    <img key={imgIndex} src={image} className="grid-image" alt={`iPhone ${imgIndex + 1}`}></img>
-                                ))}
+                            <div className="image-slider" onClick={() => handleImageClick(project.images)}>
+                                <img src={project.images[currentImageIndex]} className="slider-image" alt={`Fitness Network Screenshot ${currentImageIndex + 1}`} />
                             </div>
                         )}
                         {project.imgSrc && <img src={project.imgSrc} className="project-image" alt={project.imgAlt}></img>}
@@ -64,7 +69,7 @@ export default function Projects () {
                             ))}
                         </ul>
                         <ul className="project-links">
-                            {project.githubLink && <a href={project.githubLink} className="projects-github" target="_blank" rel="noopener noreferrer"><FaGithub size={32}/></a>}
+                            {project.githubLink && <a href={project.githubLink} className="projects-github" target="_blank" rel="noopener noreferrer"><FaGithub size={32} /></a>}
                             {project.liveLink && <a href={project.liveLink} className="projects-live" target="_blank" rel="noopener noreferrer"><span className="live-button">Live</span></a>}
                         </ul>
                     </li>
