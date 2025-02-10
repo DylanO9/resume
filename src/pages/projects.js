@@ -11,10 +11,11 @@ import iphone5 from '../assets/iphone_5.png';
 import iphone6 from '../assets/iphone_6.png';
 import iphone7 from '../assets/iphone_7.png';
 
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 export default function Projects() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [slideDirection, setSlideDirection] = useState(''); // Track slide direction for animation
 
     const projects = [
         {
@@ -47,8 +48,20 @@ export default function Projects() {
         }
     ];
 
-    const handleImageClick = (images) => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    const handleNextImage = (images) => {
+        setSlideDirection('slide-left'); // Set slide direction
+        setTimeout(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+            setSlideDirection(''); // Reset slide direction after animation
+        }, 300); // Match the duration of the CSS animation
+    };
+
+    const handlePreviousImage = (images) => {
+        setSlideDirection('slide-right'); // Set slide direction
+        setTimeout(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+            setSlideDirection(''); // Reset slide direction after animation
+        }, 300); // Match the duration of the CSS animation
     };
 
     return (
@@ -57,8 +70,20 @@ export default function Projects() {
                 {projects.map((project, index) => (
                     <li key={index}>
                         {project.images && (
-                            <div className="image-slider" onClick={() => handleImageClick(project.images)}>
-                                <img src={project.images[currentImageIndex]} className="slider-image" alt={`Fitness Network Screenshot ${currentImageIndex + 1}`} />
+                            <div className="image-slider">
+                                <button className="arrow-button left" onClick={() => handlePreviousImage(project.images)}>
+                                    <FaArrowLeft size={24} />
+                                </button>
+                                <div className="slider-image-container">
+                                    <img
+                                        src={project.images[currentImageIndex]}
+                                        className={`slider-image ${slideDirection}`}
+                                        alt={`Fitness Network Screenshot ${currentImageIndex + 1}`}
+                                    />
+                                </div>
+                                <button className="arrow-button right" onClick={() => handleNextImage(project.images)}>
+                                    <FaArrowRight size={24} />
+                                </button>
                             </div>
                         )}
                         {project.imgSrc && <img src={project.imgSrc} className="project-image" alt={project.imgAlt}></img>}
