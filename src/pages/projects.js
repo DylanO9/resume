@@ -50,18 +50,12 @@ export default function Projects() {
 
     const handleNextImage = (images) => {
         setSlideDirection('slide-left'); // Set slide direction
-        setTimeout(() => {
-            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-            setSlideDirection(''); // Reset slide direction after animation
-        }, 300); // Match the duration of the CSS animation
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length); // Immediately switch image
     };
 
     const handlePreviousImage = (images) => {
         setSlideDirection('slide-right'); // Set slide direction
-        setTimeout(() => {
-            setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-            setSlideDirection(''); // Reset slide direction after animation
-        }, 300); // Match the duration of the CSS animation
+        setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length); // Immediately switch image
     };
 
     return (
@@ -79,6 +73,7 @@ export default function Projects() {
                                         src={project.images[currentImageIndex]}
                                         className={`slider-image ${slideDirection}`}
                                         alt={`Fitness Network Screenshot ${currentImageIndex + 1}`}
+                                        onAnimationEnd={() => setSlideDirection('')} // Reset slide direction after animation
                                     />
                                 </div>
                                 <button className="arrow-button right" onClick={() => handleNextImage(project.images)}>
