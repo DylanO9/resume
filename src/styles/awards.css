@@ -118,3 +118,52 @@
     .award-item:nth-child(3) {
         --accent-color: #D2B53B;
     }
+
+    @media (max-width: 480px) {
+        #awards-list {
+            --col-gap: 1rem;
+            --barH: 0.5rem;
+            --roleH: 1rem;
+            --flapH: 1rem;
+        }
+    }
+    @media (max-width: 768px) {
+        #awards-list {
+            --col-gap: 1rem;
+            --barH: 0.5rem;
+            --roleH: 1rem;
+            --flapH: 1rem;
+        }
+    }
+    @media (max-width: 1024px) {
+        #awards-list {
+            --col-gap: 1rem;
+            --barH: 0.5rem;
+            --roleH: 1rem;
+            --flapH: 1rem;
+        }
+    }
+    @media (max-width: 1280px) {
+        #awards-list {
+            --col-gap: 1rem;
+            --barH: 0.5rem;
+            --roleH: 1rem;
+            --flapH: 1rem;
+        }
+    }
+    @media (max-width: 1440px) {
+        #awards-list {
+            --col-gap: 1rem;
+            --barH: 0.5rem;
+            --roleH: 1rem;
+            --flapH: 1rem;
+        }
+    }
+    @media (max-width: 1600px) {
+        #awards-list {
+            --col-gap: 1rem;
+            --barH: 0.5rem;
+            --roleH: 1rem;
+            --flapH: 1rem;
+        }
+    }
