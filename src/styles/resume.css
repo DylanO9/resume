@@ -67,3 +67,72 @@
     height: 100%;
     list-style-type: none;
 }
+
+@media (max-width: 1024px) {
+    #resume {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #work-experience-list, #education-list {
+        width: 75%;
+        flex-direction: column;
+    }
+
+    .work-experience-item, #education-list li {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    #resume img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #resume {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #work-experience-list, #education-list {
+        width: 85%;
+        flex-direction: column;
+    }
+
+    .work-experience-item, #education-list li {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    #resume img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #resume {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #work-experience-list, #education-list {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .work-experience-item, #education-list li {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    #resume img {
+        width: 100%;
+    }
+
+    /* change font size of main document so rem is smaller */
+    html {
+        font-size: 12px;
+    }
+    
+}

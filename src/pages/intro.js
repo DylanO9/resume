@@ -1,6 +1,7 @@
 import '../styles/intro.css';
 import headshot from '../assets/headshot.jpg';
 import { FaLinkedin, FaGithub, FaFileAlt } from 'react-icons/fa';
+import resume from '../assets/Resume.pdf';
 
 export default function Intro() {
   return (
@@ -20,7 +21,7 @@ export default function Intro() {
                 </a>
             </li>
             <li>
-                <a href="path/to/your/resume.pdf" target="_blank" rel="noopener noreferrer">
+                <a id="resume-download" download="Dylan_Olivares_Resume.pdf" href={resume} alt="Dylan Olivares Resume">
                     <FaFileAlt /> Resume
                 </a>
             </li>
