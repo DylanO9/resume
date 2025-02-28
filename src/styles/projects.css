@@ -3,12 +3,17 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    height: 200vh;
     border-bottom: 1px solid var(--secondary-color);
+    /* grow as more items appear in projects */
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
 }
 
 #projects > ul {
     width: 85%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;

@@ -10,6 +10,7 @@ import iphone4 from '../assets/iphone_4.png';
 import iphone5 from '../assets/iphone_5.png';
 import iphone6 from '../assets/iphone_6.png';
 import iphone7 from '../assets/iphone_7.png';
+import dashboard from '../assets/crypto-dashboard.png';
 
 import { FaGithub, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
@@ -18,6 +19,14 @@ export default function Projects() {
     const [slideDirection, setSlideDirection] = useState(''); // Track slide direction for animation
 
     const projects = [
+        {
+            imgSrc: dashboard,
+            imgAlt: "Crypto tracker project V2",
+            title: "Crypto Tracker V2",
+            technologies: ["Next", "Javascript", "TailwindCSS", "Supabase"],
+            githubLink: "https://github.com/DylanO9/crypto-tracker-v2",
+            liveLink: "https://crypto-tracker-v2-git-main-dylan-olivares-projects.vercel.app/"
+        },
         {
             title: "Fitness Network",
             technologies: ["Flutter"],
