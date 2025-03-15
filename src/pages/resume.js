@@ -12,9 +12,9 @@ export default function Resume () {
                     <h4>Ecommerce It Intern</h4>
                     <p>June 2024 - September 2024</p>
                     <ul>
-                        <li>Collaborated with Business Systems Analysts to gather and document requirements for projects including athlete vouchers, UK e-gift cards, and post-purchase upsell features.</li>
-                        <li>Implemented post-purchase upsell functionality, integrating requirements and resolving technical challenges in Salesforce Commerce Cloud.</li>
-                        <li>Conducted manual QA testing for Apple Pay integration on iOS devices, ensuring seamless payment workflows</li>
+                        <li>Collaborated with the Business Analyst team to gather, document, and discuss requirements, ensuring alignment of engineering and business needs, and to streamline the development cycles for projects including adding support for athlete vouchers, UK e-gift cards, and post-purchase upsell features.</li>
+                        <li>Worked on developing post-purchase upsell functionality using ISML, JavaScript, and XHTML to increase average order value.</li>
+                        <li>Conducted manual QA testing for Apple Pay integration on iOS devices to ensure a seamless payment workflow.</li>
                     </ul>
                 </li>
                 <li className="work-experience-item">
@@ -22,9 +22,9 @@ export default function Resume () {
                     <h4>Developer Intern</h4>
                     <p>November 2023 - March 2024</p>
                     <ul>
-                        <li>Utilized Next and Tailwind CSS to create responsive and visually appealing front-end components, ensuring compatibility across various devices</li>
-                        <li>Implemented user authentication and authorization using Auth0, enhancing security and providing seamless access control.</li>
-                        <li>Developed a watchlist feature allowing users to monitor their portfolio, linking profiles to stored data and providing real-time updates.</li>
+                        <li>Built and optimized filtering, sorting, and pagination features with a focus on responsive and accessible design to streamline navigation.</li>
+                        <li>Developed a watchlist feature that allows users to monitortheir portfolio,
+                        linking profiles to stored data</li>
                     </ul>
                 </li>
             </ul>
